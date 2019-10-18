@@ -5,6 +5,7 @@ import { PurchasingComponent } from './home/purchasing/purchasing.component'
 import { BudgetsComponent } from './home/budgets/budgets.component'
 import { ReportsComponent } from './home/reports/reports.component'
 import { HomeComponent } from './home/home.component';
+import { CreateOrderComponent } from './home/purchasing/create-order/create-order.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},

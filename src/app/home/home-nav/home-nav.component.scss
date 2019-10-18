@@ -67,8 +67,10 @@
     
 }
 .menus {
-        margin-top: 1.3em;
+        position: absolute;
+        margin-top: 0.6em;
         margin-left: 0.5em;
+        left:70px;
         width: 0;
         font-weight: bold;
         opacity: 0;

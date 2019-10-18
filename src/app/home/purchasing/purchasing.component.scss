@@ -12,12 +12,44 @@
     }
 }
 
+.container {
+    background: #fff;
+    width: 46vw;
+    height: 60vh;
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+    
+    .title{
+        display: flex;
+        font-size: 1.5em;
+    }
+    
+    .darken{
+        background-color: #8AFF9D;
+    }
+    
+    .create-order{
+        margin-left:auto;
+        margin-right: auto;
+        height: 50vh;
+        width:40vw;        
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 button{
+    position: absolute;
+    bottom: 70px;
+    right: 26%;
     cursor: pointer;
     font-size: 1em;
     border: none;
     width: 30%;
-    padding: 0.75em;  
+    padding: 0.5em;  
     font-weight: 600;
     text-align: center;
     outline: none;
@@ -27,7 +59,7 @@ button{
 
     &.btn-create{
         border-radius: 7px;
-        background-color: #2eb66e;
+        background-color: var(--primary-dark);
         color: #ffffff;
         transition-property: opacity;
         transition-timing-function: ease-in;
@@ -38,7 +70,7 @@ button{
         }
 
         &:active{
-            background-color: #248f56;
+            background-color: var(--primary)
         }
     }
 
