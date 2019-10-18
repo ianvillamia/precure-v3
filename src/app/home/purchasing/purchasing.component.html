@@ -3,8 +3,46 @@
         <span>Purchase Orders</span>
     </div>
 
-    <div class="asd">
-        <div class="button">
+    <div class="container">
+        <div class="create-order">
+                <mat-label class="title">Create Purchase Order</mat-label>
+                    <div class="input">
+                    <mat-form-field hideRequiredMarker>
+                            <mat-label>Delivery Date: </mat-label>
+                            <input  matInput required >
+                    </mat-form-field>
+                    </div>
+                    
+                    <div class="input">
+                    <mat-form-field  hideRequiredMarker>
+                            <mat-label>Location</mat-label>
+                            <input  matInput required >
+                    </mat-form-field>
+                    </div>
+
+                    <div class="input">
+                    <mat-form-field    hideRequiredMarker>
+                            <mat-label>Supplier </mat-label>
+                            <input  matInput required >
+                    </mat-form-field>
+                    </div>
+
+                    <div class="input">
+                    <mat-form-field    hideRequiredMarker>
+                            <mat-label>Budgets </mat-label>
+                            <input  matInput required >
+                    </mat-form-field>
+                    </div>
+                    
+                    <div class="input">           
+                    <mat-form-field >
+                            <mat-label>Password:</mat-label>
+                            <input type="password" matInput>
+                            <!-- <mat-hint align="end">Min 5 Character</mat-hint> -->
+                    </mat-form-field>  
+                    </div>       
+        </div>
+        <div class="button" [routerLink]="['/home/create-order']" routerLinkActive="active">
             <button mat-raised-button class="btn-create">
                 <i class="material-icons">
                         add_circle_outline
@@ -12,6 +50,7 @@
                 <span class="x">Create</span>
             </button>
         </div>
+        
         
     </div>
 
