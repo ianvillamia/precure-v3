@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import { 
+import {
   MatButtonModule,
   MatInputModule,
   MatFormFieldModule,
@@ -10,7 +10,6 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatSelectModule
-
 } from '@angular/material';
 
 
