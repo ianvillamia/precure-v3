@@ -15,10 +15,10 @@
                 </mat-expansion-panel-header>
              <div class="inside">
                 <div class="row"><p>Status</p> <button mat-mini-fab color="primary">Active</button></div> 
-                <p> item category</p>
-                <p>item name </p>
-                <p>location</p>
-                 <p>budget</p>
+                <p> item category:</p> {{transaction.item_category}}
+                <p>item name </p> {{transaction.item_name}}
+                <p>location</p>{{transaction.location}}
+                 <p>budget</p>{{transaction.budget}}
              </div>
              <div class="buttons">
                 <button mat-raised-button class="cancel">Cancel Order</button>
