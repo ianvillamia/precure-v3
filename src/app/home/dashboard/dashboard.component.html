@@ -2,12 +2,12 @@
     <div class="top-title">
         <span>Dashboard</span>
     </div>
-    <mat-accordion>
+    <mat-accordion *ngIf="transactionServ.activeTransactions; else noTransactions">
             <!-- item component -->
         <mat-expansion-panel *ngFor="let transaction of transactionServ.activeTransactions">
                 <mat-expansion-panel-header>
                         <mat-panel-title>Order ID: {{transaction.id}}</mat-panel-title>
-                        <mat-panel-description>{{transaction.delivery_date.seconds * 1000 | date:'MM-dd-yyyy'}}</mat-panel-description>        
+                        <mat-panel-description>{{transaction.delivery_date.seconds * 1000 | date:'MMM dd, yyyy'}}</mat-panel-description>        
                 </mat-expansion-panel-header>
                 <p>inside</p>
                 this works
@@ -15,7 +15,11 @@
 
                 <!-- item component -->
     </mat-accordion>
-       
-        
+
+    <ng-template #noTransactions>
+        <app-loading-spinner></app-loading-spinner>
+    </ng-template>
+    
+    
       
 </div>

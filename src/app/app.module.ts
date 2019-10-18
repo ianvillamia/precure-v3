@@ -22,6 +22,7 @@ import { environment } from '../environments/environment.prod';
 
 //services
 import { TransactionService } from './home/shared/transaction.service';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TransactionService } from './home/shared/transaction.service';
     BudgetsComponent,
     ReportsComponent,
     CreateOrderComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
