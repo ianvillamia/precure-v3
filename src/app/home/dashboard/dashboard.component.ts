@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.transactionCol = this.afs.collection('users/gIHQ7ONtv9uw4fsJzRni/transactions', ref => ref.orderBy('delivery_date', 'desc'));
+    this.transactionCol = this.afs.collection('users/gIHQ7ONtv9uw4fsJzRni/transactions', ref => ref.where('status', '==', 'active').orderBy('delivery_date', 'desc'));
     this.activeTransactions = this.transactionCol.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Transaction;
