@@ -42,6 +42,12 @@
     width: 100%; 
     overflow: hidden;
     white-space: nowrap;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        color: #6b6969
+    }
 
     img.x {
         padding: 1em;
