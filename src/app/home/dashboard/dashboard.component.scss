@@ -1,0 +1,26 @@
+.item{
+    span{
+        display: flex;
+        justify-content: center;
+        .num{
+            font-size: 30%;
+        }
+    }
+    width: 20vw;
+    height: 20vw;
+    background-color: #ffffff;
+    border-radius: 2em;
+}
+.body{
+    position: absolute;
+    top:5vh;
+    left: 15vw;
+    padding: 2em;
+}
+.top-title{
+    width: 80vw;
+    border-bottom: 1px solid black;
+    span{
+        font-size: 5vh;
+    }
+}

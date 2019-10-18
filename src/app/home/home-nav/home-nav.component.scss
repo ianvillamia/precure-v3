@@ -5,7 +5,9 @@
     background-color:  #ffffff;
     transition: 0.5s;
     overflow: hidden;
-    text-overflow: ellipsis 
+    text-overflow: ellipsis;
+    position: absolute;
+    z-index: 99;
 }
 
 .nav-main:hover{
