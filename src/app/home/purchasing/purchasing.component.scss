@@ -14,14 +14,12 @@
 
 .container {
     position: absolute;
-    right: 40%;
+
     background: #fff;
-    width: 46vw;
+    width: 73vw;
     height: 65vh;
     border-radius: 5px;
     margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
     padding: 3em;
     
     .title{
@@ -34,8 +32,6 @@
     }
     
     .create-order{
-        margin-left:auto;
-        margin-right: auto;
         height: 50vh;
         width:40vw;        
         display: flex;

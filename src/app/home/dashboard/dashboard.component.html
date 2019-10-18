@@ -6,8 +6,13 @@
             <!-- item component -->
         <mat-expansion-panel *ngFor="let transaction of transactionServ.activeTransactions">
                 <mat-expansion-panel-header>
+                    
                         <mat-panel-title>Order ID: {{transaction.id}}</mat-panel-title>
-                        <mat-panel-description>{{transaction.delivery_date.seconds * 1000 | date:'MMM dd, yyyy'}}</mat-panel-description>        
+                        <div class="desc">
+                            <mat-panel-description>
+                                {{transaction.delivery_date.seconds * 1000 | date:'MMM dd, yyyy'}}
+                            </mat-panel-description>
+                    </div>
                 </mat-expansion-panel-header>
                 <p>inside</p>
                 this works
