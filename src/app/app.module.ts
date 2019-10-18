@@ -20,6 +20,9 @@ import { CreateOrderComponent } from './home/purchasing/create-order/create-orde
 
 import { environment } from '../environments/environment.prod';
 
+//services
+import { TransactionService } from './home/shared/transaction.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,7 @@ import { environment } from '../environments/environment.prod';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [],
+  providers: [TransactionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
