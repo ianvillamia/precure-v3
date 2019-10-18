@@ -3,27 +3,7 @@
     height: 60vh;
    
 }
-.item{
-  
-    display: flex;
-    padding: 5%;
-    flex-direction: column;
-    text-align: center;
-    width: 7vw;
-    height: 8vw;
-    background-color: #ffffff;
-    border-radius: 2em;
-  
-    .num{
-        font-size: 8vh;
-    }    
-    .item-name{
-        font-size: 5vh;
-    }
-    .item-desc{
-        font-size: 3vh;
-    }
-}
+
 .body{
     position: absolute;
     top:5vh;
