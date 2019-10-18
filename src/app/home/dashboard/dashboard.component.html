@@ -21,10 +21,12 @@
                  <p>budget</p>
              </div>
              <div class="buttons">
-                    <button mat-raised-button class="cancel">Cancel Order</button>
-                 <button mat-raised-button color="primary">View Quotes</button>
-
+                <button mat-raised-button class="cancel">Cancel Order</button>
+                <button mat-raised-button color="primary" [routerLink]="['/home/dashboard/quotes']" routerLinkActive="active">
+                    View Quotes
+                </button>
              </div>
+             
         </mat-expansion-panel>
 
                 <!-- item component -->
