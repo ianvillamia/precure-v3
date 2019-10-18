@@ -11,7 +11,21 @@
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
-                    
+
+                    <mat-form-field>
+                            <mat-label>Item Category</mat-label>
+                            <mat-select required>
+                                <mat-option *ngFor="let category of city" [value]="category.value">
+                                {{category.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field required>
+                            <mat-label>Item Name:</mat-label>
+                            <input  matInput required >
+                    </mat-form-field>
+              
                     <mat-form-field>
                         <mat-label>Location</mat-label>
                         <mat-select required>
@@ -31,16 +45,38 @@
                     </mat-form-field>
                                      
         </div>
-        <div class="button" [routerLink]="['/home/create-order']" routerLinkActive="active">
+    
+      
+        <!-- <div class="button" [routerLink]="['/home/create-order']" routerLinkActive="active">
             <button mat-raised-button class="btn-create">
                 <i class="material-icons">
                         add_circle_outline
                 </i>
                 <span class="x">Confirm</span>
             </button>
-        </div>
+        </div> -->
         
         
+    </div>
+    <div class="button-container">
+            <button mat-raised-button class="btn-create" disableRipple  [routerLink]="['/home/create-order']" routerLinkActive="active">
+                <i class="material-icons">
+                        add_circle_outline
+                </i>
+                <span class="x">Confirm</span>
+        </button>
+        <button mat-raised-button disableRipple  [routerLink]="['/home/create-order']" routerLinkActive="active">
+            <i class="material-icons">
+                    add_circle_outline
+            </i>
+            <span class="x">Add Documents</span>
+        </button>
+        <button mat-raised-button class="" color="success" disableRipple  [routerLink]="['/home/create-order']" routerLinkActive="active">
+            <i class="material-icons">
+                    add_circle_outline
+            </i>
+            <span class="x">cancel</span>
+        </button>
     </div>
 
 </div>
