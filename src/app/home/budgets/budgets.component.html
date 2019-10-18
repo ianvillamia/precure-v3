@@ -1,37 +1,42 @@
 <div class="body">
     <div class="top-title">
-        <span>BANK</span>
+        <span>Budgets</span>
     </div>
-   
-        <div class="card"></div>
+        <mat-accordion>
+                <mat-card>
+                   <div class="items">
+                      <span>#</span>
+                      <span>Budget Name</span>
+                      <span>Budget holder</span>
+                      <span>Total</span>
+                      <span>Available</span>  
+                      <span></span>     
+                   </div>
+                </mat-card>
+                <!-- item component -->
+                <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                                
+                                <mat-panel-description>#</mat-panel-description>
+                                <mat-panel-description>Budget Name</mat-panel-description>
+                                <mat-panel-description>Budget holder</mat-panel-description>      
+                                <mat-panel-description>Total</mat-panel-description>
+                                <mat-panel-description>Available</mat-panel-description>    
+                        </mat-expansion-panel-header>
+                        
+                </mat-expansion-panel>
 
-                <button mat-raised-button class="btn-create" disableRipple>
-                        <i class="material-icons">
-                                add_circle_outline
-                        </i>
-                        <span class="x">Create</span>
-                </button>
-        
-
-    <div class="cards">
-            <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                            <mat-panel-title>Budget ID: 01</mat-panel-title>
-                            <mat-panel-description>Budget Holder:Serdon</mat-panel-description>        
-                    </mat-expansion-panel-header>
-                   <p>inside</p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                            <mat-panel-title>Budget ID: 01</mat-panel-title>
-                            <mat-panel-description>Budget Holder:Serdon</mat-panel-description>        
-                    </mat-expansion-panel-header>
-                   <p>inside</p>
-            </mat-expansion-panel>
-    </div>
-   
-  
-
-
+                <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                                <mat-panel-description>#</mat-panel-description>
+                                <mat-panel-description>Budget Name</mat-panel-description>
+                                <mat-panel-description>Budget holder</mat-panel-description>      
+                                <mat-panel-description>Total</mat-panel-description>
+                                <mat-panel-description>Available</mat-panel-description>
+                                <mat-panel-description>Progressbar</mat-panel-description>         
+                        </mat-expansion-panel-header>
+                        <p>inside</p>
+                </mat-expansion-panel>
+                <!-- item component -->
+        </mat-accordion>
 </div>
-
