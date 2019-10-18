@@ -8,12 +8,18 @@
     text-overflow: ellipsis;
     position: absolute;
     z-index: 99;
+    
 }
 
 .nav-main:hover{
     height: 100vh;
-    width: 20vw;
+    width: 14vw;
     transition: 0.5s;
+    
+    .menus {
+        opacity: 100;
+        transition: 0.5s;
+    }
 }
 
 .nav-top{
@@ -59,4 +65,5 @@
         margin-left: 0.5em;
         width: 0;
         font-weight: bold;
+        opacity: 0;
     }
