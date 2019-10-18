@@ -17,7 +17,7 @@
     right: 40%;
     background: #fff;
     width: 46vw;
-    height: 65vh;
+    height: 70vh;
     border-radius: 5px;
     margin-top: 1em;
     margin-left: auto;
@@ -42,20 +42,38 @@
         flex-direction: column;
     }
 }
-.button-container{
 
-    position: absolute;
-    top: 30vh;
-    right: 10%;
-    align-content: center;
+
+.button{
+    height: 8vh;
+    width: 10vw;
 }
 .green{
     background-color: #4ebd17;
     color: white;
+    height: 6vh;
+    font-size: 15px;
+    position: absolute;
+    top: 90vh;
+    width: 10vw;
+    right: 40vw;
+
 }
-.add{
-    width: 100%;
+.red{
+    width: 10vw;
+    height: 6vh;
+    font-size: 15px;
+    position: absolute;
+    top: 90vh;
+    width: 10vw;
+    right: 50vw;
+    margin-right:5px;
 }
-.button{
-    margin:5%;
+
+.add
+{
+    position: absolute;
+    top: 80vh;
+    width: 15vw;
+    right: 40vw;
 }
