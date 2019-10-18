@@ -1,0 +1,60 @@
+.nav-main{
+    padding: 1em;
+    width: 5vw;
+    height: 100vh;
+    background-color:  #ffffff;
+    transition: 0.5s;
+    overflow: hidden;
+    text-overflow: ellipsis 
+}
+
+.nav-main:hover{
+    height: 100vh;
+    width: 20vw;
+    transition: 0.5s;
+}
+
+.nav-top{
+    height: 10vh;
+    border-bottom: black 1px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .logo {
+        
+        img{
+        padding: 0.5em;
+        margin-right: auto;
+        }
+    }
+}
+
+.nav-item{
+    width: 100%; 
+    overflow: hidden;
+    white-space: nowrap;
+
+    img.x {
+        padding: 1em;
+        margin-top: 1em;
+        width: 30px;
+        height: 30px;
+        
+    }
+
+}
+
+.icon {
+    display:flex;
+    align-items: center;
+   
+
+    
+}
+.menus {
+        margin-top: 1.3em;
+        margin-left: 0.5em;
+        width: 0;
+        font-weight: bold;
+    }
