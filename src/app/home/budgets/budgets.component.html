@@ -5,7 +5,6 @@
         <mat-accordion>
                 <mat-card>
                    <div class="items">
-                      <span>#</span>
                       <span>Budget Name</span>
                       <span>Budget holder</span>
                       <span>Total</span>
@@ -14,7 +13,23 @@
                    </div>
                 </mat-card>
                 <!-- item component -->
-                <mat-expansion-panel>
+                <mat-expansion-panel *ngFor="let budget of transactionServ.budgets">
+                        <mat-expansion-panel-header>
+
+                                <mat-panel-description>{{budget.name | uppercase}}</mat-panel-description>
+                                <mat-panel-description>{{budget.budget_holder}}</mat-panel-description>      
+                                <mat-panel-description>{{budget.total}}</mat-panel-description>
+                                <mat-panel-description>{{budget.available}}</mat-panel-description>    
+                        </mat-expansion-panel-header>
+                        
+                        <div class="right">
+                                        <button mat-raised-button color="primary">Edit</button>
+                                        <button mat-raised-button>Delete</button>
+                        </div>
+                       
+                </mat-expansion-panel>
+                
+                <!--<mat-expansion-panel>
                         <mat-expansion-panel-header>
                                 
                                 <mat-panel-description>1</mat-panel-description>
@@ -38,7 +53,8 @@
                                 <mat-panel-description>Total</mat-panel-description>
                                 <mat-panel-description>Available</mat-panel-description>       
                         </mat-expansion-panel-header>
-                </mat-expansion-panel>
-                <!-- item component -->
+                </mat-expansion-panel>-->
+
+                <!-- item component --> 
         </mat-accordion>
 </div>

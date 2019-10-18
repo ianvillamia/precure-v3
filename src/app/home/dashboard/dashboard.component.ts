@@ -13,8 +13,6 @@ import { TransactionService } from '../shared/transaction.service';
 export class DashboardComponent implements OnInit {
   activeTransactions: Observable<Transaction[]>;
   transactionCol: AngularFirestoreCollection<Transaction>;
-
-
   //gIHQ7ONtv9uw4fsJzRni
 
   constructor(private afs: AngularFirestore, public transactionServ: TransactionService) { 
@@ -33,7 +31,7 @@ export class DashboardComponent implements OnInit {
 
     this.activeTransactions.subscribe(transactions => {
       this.transactionServ.activeTransactions = transactions;
-      console.log(transactions);
+      //console.log(transactions);
     });
   }
 
