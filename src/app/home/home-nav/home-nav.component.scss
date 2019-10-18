@@ -8,9 +8,13 @@
     text-overflow: ellipsis;
     position: absolute;
     z-index: 99;
-
     box-shadow: 0 0 6px -2px var(--black-light);
-    
+}
+
+.nav-body {
+    display:flex;
+    text-align: center;
+    flex-direction: column;
 }
 
 .nav-main:hover{
@@ -53,7 +57,6 @@
 
     img.x {
         padding: 1em;
-        margin-top: 1em;
         width: 30px;
         height: 30px;
         
@@ -65,12 +68,10 @@
     display:flex;
     align-items: center;
    
-
-    
 }
+
 .menus {
     position: absolute;
-    margin-top: 0.6em;
     margin-left: 0.5em;
     left:70px;
     width: 0;
