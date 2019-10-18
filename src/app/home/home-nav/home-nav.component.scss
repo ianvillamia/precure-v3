@@ -8,6 +8,8 @@
     text-overflow: ellipsis;
     position: absolute;
     z-index: 99;
+
+    box-shadow: 0 0 6px -2px var(--black-light);
     
 }
 
@@ -67,11 +69,20 @@
     
 }
 .menus {
-        position: absolute;
-        margin-top: 0.6em;
-        margin-left: 0.5em;
-        left:70px;
-        width: 0;
-        font-weight: bold;
-        opacity: 0;
+    position: absolute;
+    margin-top: 0.6em;
+    margin-left: 0.5em;
+    left:70px;
+    width: 0;
+    font-weight: bold;
+    opacity: 0;
+}
+
+.active{
+    background-color: var(--primary);
+    color: var(--white);
+
+    &:hover{
+        color: var(--white);
     }
+}
