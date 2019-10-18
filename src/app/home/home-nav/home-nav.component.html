@@ -6,28 +6,28 @@
     </div>
     <div class="nav-body">
         <!-- <div class="nav-top">logo POOP</div> -->
-        <div class="nav-item" [routerLink]="['/dashboard']" routerLinkActive="active">
+        <div class="nav-item" [routerLink]="['/home/dashboard']" routerLinkActive="active">
             <div class="icon">
             <img class="x" src="../../../../../assets/icons/home-icon.png" />
                 <span class="menus">Dashboard</span>
             </div>
         </div>
 
-        <div class="nav-item" [routerLink]="['/']" routerLinkActive="active">
+        <div class="nav-item" [routerLink]="['/home/purchase-order']" routerLinkActive="active">
             <div class="icon">
             <img class="x" src="../../../../../assets/icons/purchase-order-icon.png" />
                 <span class="menus">Purchase Order</span>
             </div>
         </div>
 
-        <div class="nav-item">
+        <div class="nav-item" [routerLink]="['/home/budget']" routerLinkActive="active">
             <div class="icon">
             <img class="x" src="../../../../../assets/icons/budget-icon.png" />
                 <span class="menus">Bank</span>
             </div>
         </div>
 
-        <div class="nav-item">
+        <div class="nav-item" [routerLink]="['/home/report']" routerLinkActive="active">
             <div class="icon">
             <img class="x" src="../../../../../assets/icons/report-icon.png"  />
                 <span class="menus">Report</span>
