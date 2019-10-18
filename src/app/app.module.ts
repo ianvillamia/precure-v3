@@ -20,6 +20,10 @@ import { CreateOrderComponent } from './home/purchasing/create-order/create-orde
 
 import { environment } from '../environments/environment.prod';
 
+//services
+import { TransactionService } from './home/shared/transaction.service';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +34,7 @@ import { environment } from '../environments/environment.prod';
     BudgetsComponent,
     ReportsComponent,
     CreateOrderComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,7 @@ import { environment } from '../environments/environment.prod';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [],
+  providers: [TransactionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

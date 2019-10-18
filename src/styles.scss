@@ -19,3 +19,9 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
+
+h1{
+    &.loading{
+        color: var(--primary);
+    }
+}
