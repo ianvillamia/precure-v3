@@ -2,23 +2,25 @@
     <div class="top-title">
         <span>Dashboard</span>
         </div>
-    <div class="items">
-        <div class="item">
-           <div class="num">1</div>
-            <div class="item-name">Name</div>
-            <div class="item-desc">Description</div>
-           </div>
-    </div>
-    <div class="body">
-        <div class="top-title">
-            <span>Dashboard</span>
-            </div>
-        <div class="items">
-            <div class="item">
-               <div class="num">1</div>
-                <div class="item-name">Name</div>
-                <div class="item-desc">Description</div>
-               </div>
-        </div>
-    </div>
+    <mat-accordion>
+            <!-- item component -->
+            <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                            <mat-panel-title>Order ID:</mat-panel-title>
+                            <mat-panel-description>desc</mat-panel-description>        
+                    </mat-expansion-panel-header>
+                   <p>inside</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                            <mat-panel-title>Order ID:</mat-panel-title>
+                            <mat-panel-description>desc</mat-panel-description>        
+                    </mat-expansion-panel-header>
+                   <p>inside</p>
+                </mat-expansion-panel>
+                <!-- item component -->
+    </mat-accordion>
+       
+        
+      
 </div>
