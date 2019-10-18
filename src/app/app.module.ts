@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 //material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +18,7 @@ import { ReportsComponent } from './home/reports/reports.component';
 import { CreateOrderComponent } from './home/purchasing/create-order/create-order.component';
 //material
 
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { CreateOrderComponent } from './home/purchasing/create-order/create-orde
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
