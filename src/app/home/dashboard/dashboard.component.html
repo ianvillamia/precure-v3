@@ -2,6 +2,11 @@
     <div class="top-title">
         <span>Dashboard</span>
     </div>
+    <mat-card class="header">
+    <mat-card-header >
+        ORDERS
+    </mat-card-header>
+    </mat-card>
     <mat-accordion *ngIf="transactionServ.activeTransactions; else noTransactions">
             <!-- item component -->
         <mat-expansion-panel *ngFor="let transaction of transactionServ.activeTransactions">
