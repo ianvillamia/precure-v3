@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Transaction } from '../models/transaction.model';
+
 export interface template {
   value: string;
   viewValue: string;
 }
-
-
 
 
 @Component({
@@ -14,7 +14,7 @@ export interface template {
   styleUrls: ['./purchasing.component.scss']
 })
 export class PurchasingComponent implements OnInit {
-
+  newTransaction: Transaction;
   city: template[] = [
     {value: 'Makati-0', viewValue: 'Makati'},
     {value: 'Pateros-1', viewValue: 'Pateros'},

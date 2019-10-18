@@ -2,7 +2,7 @@
     <div class="top-title">
         <span>Budgets</span>
     </div>
-        <mat-accordion>
+        <mat-accordion *ngIf="transactionServ.activeTransactions; else noTransactions">
                 <mat-card>
                    <div class="items">
                       <span>Budget Name</span>
@@ -57,4 +57,8 @@
 
                 <!-- item component --> 
         </mat-accordion>
+
+        <ng-template #noTransactions>
+                <app-loading-spinner></app-loading-spinner>
+        </ng-template>      
 </div>
