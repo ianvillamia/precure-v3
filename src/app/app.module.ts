@@ -13,6 +13,7 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { PurchasingComponent } from './home/purchasing/purchasing.component';
 import { BudgetsComponent } from './home/budgets/budgets.component';
 import { ReportsComponent } from './home/reports/reports.component';
+import { CreateOrderComponent } from './home/purchasing/create-order/create-order.component';
 //material
 
 
@@ -25,6 +26,7 @@ import { ReportsComponent } from './home/reports/reports.component';
     PurchasingComponent,
     BudgetsComponent,
     ReportsComponent,
+    CreateOrderComponent,
   ],
   imports: [
     BrowserModule,
