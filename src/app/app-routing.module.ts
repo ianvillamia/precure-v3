@@ -18,7 +18,8 @@ const routes: Routes = [
 
     {path:'purchase-order', component: PurchasingComponent},
     {path:'budget', component: BudgetsComponent},
-    {path:'report', component: ReportsComponent}
+    {path:'report', component: ReportsComponent},
+    {path: 'dashboard/:id', component: QuotesComponent}
   ]}
   
   

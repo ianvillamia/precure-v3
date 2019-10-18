@@ -22,9 +22,8 @@
              </div>
              <div class="buttons">
                 <button mat-raised-button class="cancel">Cancel Order</button>
-                <button mat-raised-button color="primary" [routerLink]="['/home/dashboard/quotes']" routerLinkActive="active">
-                    View Quotes
-                </button>
+                <button mat-raised-button color="primary" [routerLink]="[ '/home/dashboard', transaction.id]">View Quotes</button>
+
              </div>
              
         </mat-expansion-panel>
