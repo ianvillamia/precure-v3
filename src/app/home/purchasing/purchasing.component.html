@@ -6,13 +6,13 @@
     <div class="container">
         <div class="create-order">
                 <mat-label class="title">Create Purchase Order</mat-label>
-                    <mat-form-field color="primary">
+                    <mat-form-field class="width" color="primary">
                         <input matInput [matDatepicker]="picker" placeholder="Delivery Date" required>
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
 
-                    <mat-form-field>
+                    <mat-form-field class="width" required>
                             <mat-label>Item Category</mat-label>
                             <mat-select required>
                                 <mat-option *ngFor="let category of city" [value]="category.value">
@@ -21,12 +21,12 @@
                             </mat-select>
                     </mat-form-field>
 
-                    <mat-form-field required>
+                    <mat-form-field class="width" required>
                             <mat-label>Item Name:</mat-label>
                             <input  matInput required >
                     </mat-form-field>
               
-                    <mat-form-field>
+                    <mat-form-field class="width" required>
                         <mat-label>Location</mat-label>
                         <mat-select required>
                             <mat-option *ngFor="let cities of city" [value]="cities.value">
@@ -35,7 +35,7 @@
                         </mat-select>
                     </mat-form-field>
 
-                    <mat-form-field>
+                    <mat-form-field class="width" required>
                         <mat-label>Budget</mat-label>
                         <mat-select required>
                             <mat-option *ngFor="let budgets of budget" [value]="budgets.value">

@@ -14,7 +14,6 @@
 
 .container {
     position: absolute;
-
     background: #fff;
     width: 73vw;
     height: 65vh;
@@ -37,11 +36,15 @@
         display: flex;
         flex-direction: column;
     }
+
+    .width{
+        width: 72vw;
+    }
 }
 
 
 .button{
-    height: 8vh;
+    height: 9vh;
     width: 10vw;
 }
 .green{
@@ -50,9 +53,9 @@
     height: 6vh;
     font-size: 15px;
     position: absolute;
-    top: 90vh;
+    top: 85vh;
     width: 10vw;
-    right: 40vw;
+    right: 7vw;
 
 }
 .red{
@@ -60,16 +63,16 @@
     height: 6vh;
     font-size: 15px;
     position: absolute;
-    top: 90vh;
+    top: 85vh;
     width: 10vw;
-    right: 50vw;
+    right: 17vw;
     margin-right:5px;
 }
 
 .add
 {
     position: absolute;
-    top: 80vh;
+    top: 75vh;
     width: 15vw;
-    right: 40vw;
+    right: 7vw;
 }
