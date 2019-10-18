@@ -6,13 +6,19 @@ import {
   MatInputModule,
   MatFormFieldModule,
   MatSidenavModule,
-  MatDatepickerModule
+  MatExpansionModule
 
 } from '@angular/material';
 
 
 const  MaterialComponents = [
-  MatButtonModule,MatFormFieldModule,  MatInputModule,MatSidenavModule,FormsModule, MatDatepickerModule];
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSidenavModule,
+  FormsModule,
+  MatExpansionModule
+];
 @NgModule({
   imports: [MaterialComponents],
   exports:[MaterialComponents]
