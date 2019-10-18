@@ -6,15 +6,20 @@ import { BudgetsComponent } from './home/budgets/budgets.component'
 import { ReportsComponent } from './home/reports/reports.component'
 import { HomeComponent } from './home/home.component';
 import { CreateOrderComponent } from './home/purchasing/create-order/create-order.component';
+import { QuotesComponent } from './home/dashboard/quotes/quotes.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent, children:[
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-    {path:'dashboard', component: DashboardComponent},
+    {path:'dashboard', component: DashboardComponent, children:[
+      {path:'quotes', component: QuotesComponent},
+    ]},
+
     {path:'purchase-order', component: PurchasingComponent},
     {path:'budget', component: BudgetsComponent},
-    {path:'report', component: ReportsComponent}
+    {path:'report', component: ReportsComponent},
+    {path: 'dashboard/:id', component: QuotesComponent}
   ]}
   
   
