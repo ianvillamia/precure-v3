@@ -11,7 +11,6 @@ import { TransactionService } from '../shared/transaction.service';
   styleUrls: ['./budgets.component.scss']
 })
 export class BudgetsComponent implements OnInit {
-  
 
   constructor(public transactionServ: TransactionService) { }
 

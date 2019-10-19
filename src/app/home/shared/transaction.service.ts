@@ -11,11 +11,13 @@ import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/fires
 })
 export class TransactionService {
   activeTransactions: Transaction[];
+  receivedTransactions: Transaction[];
   budgets: Budget[];
   locations: Location[];
   budgetsO: Observable<Budget[]>;
   budgetCol: AngularFirestoreCollection<Budget>;
   transactionCol: AngularFirestoreCollection<Transaction>;
+  loading = true;
 
   constructor(private afs: AngularFirestore) { 
     this.transactionCol = this.afs.collection('users/gIHQ7ONtv9uw4fsJzRni/transactions');
@@ -31,6 +33,7 @@ export class TransactionService {
 
     this.budgetsO.subscribe(budget => {
       this.budgets = budget;
+      this.loading = false;
     });
   }
 

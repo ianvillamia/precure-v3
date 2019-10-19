@@ -13,6 +13,7 @@ import { TransactionService } from '../shared/transaction.service';
 export class DashboardComponent implements OnInit {
   activeTransactions: Observable<Transaction[]>;
   transactionCol: AngularFirestoreCollection<Transaction>;
+  loading = true
   //gIHQ7ONtv9uw4fsJzRni
 
   constructor(private afs: AngularFirestore, public transactionServ: TransactionService) { 
@@ -31,6 +32,7 @@ export class DashboardComponent implements OnInit {
 
     this.activeTransactions.subscribe(transactions => {
       this.transactionServ.activeTransactions = transactions;
+      this.loading = false;
       //console.log(transactions);
     });
   }

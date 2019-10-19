@@ -2,7 +2,7 @@
     <div class="top-title">
         <span>Budgets</span>
     </div>
-        <mat-accordion *ngIf="transactionServ.activeTransactions; else noTransactions">
+        <mat-accordion>
                 <mat-card>
                    <div class="items">
                       <span>Budget Name</span>
@@ -12,6 +12,8 @@
                       <span></span>     
                    </div>
                 </mat-card>
+
+                
                 <!-- item component -->
                 <mat-expansion-panel *ngFor="let budget of transactionServ.budgets">
                         <mat-expansion-panel-header>
@@ -22,23 +24,18 @@
                         </mat-expansion-panel-header>
                         
                         <div class="right">
-<<<<<<< HEAD
-                                <button mat-raised-button color="primary">Edit</button>
-                                <button mat-raised-button>Delete</button>
-=======
                             <button mat-raised-button>
                                 <i class="material-icons edit">
                                         edit
                                 </i>
                                 Edit
-                            </button>
+                            </button>   
                             <button mat-raised-button>
                                 <i class="material-icons delete">
                                         delete
                                 </i>
                                 Delete
                             </button>
->>>>>>> 4fda1cf5fd3e150dc65b15bcea0fc1a5cb272a88
                         </div>
                        
                 </mat-expansion-panel>
@@ -71,9 +68,10 @@
 
                 <!-- item component --> 
         </mat-accordion>
+        <div *ngIf="transactionServ.loading">
+                <app-loading-spinner></app-loading-spinner>
+        </div>
         <button mat-raised-button color="primary">Create Budget</button>
 
-        <ng-template #noTransactions>
-                <app-loading-spinner></app-loading-spinner>
-        </ng-template>      
+             
 </div>

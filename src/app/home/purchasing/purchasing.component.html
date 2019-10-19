@@ -2,6 +2,7 @@
     <div class="top-title">
         <span>Purchase Orders</span>
     </div>
+    
     <div class="container">
         <div class="create-order">
                 <mat-label class="title">Create Purchase Order</mat-label>
@@ -34,19 +35,22 @@
                         </mat-select>
                     </mat-form-field>
 
-                    <mat-form-field class="width" required *ngIf="transactionServ.activeTransactions; else noTransactions">
+                    <mat-form-field class="width" required>
                         <mat-label>Budget</mat-label>
-                        <mat-select required >
-                            <mat-option *ngFor="let budget of transactionServ.budgets" [value]="budget">
+                        <mat-select required [(ngModel)]="budget">
+                            <mat-option *ngFor="let budget of transactionServ.budgets" [value]="budget.available">
                                     {{budget.name}} - {{budget.available}}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
-                    <ng-template #noTransactions>
-                            <app-loading-spinner></app-loading-spinner>
-                    </ng-template>           
+                    <!--<div *ngIf="transactionServ.loading">
+                        <app-loading-spinner></app-loading-spinner>
+                    </div> -->       
         </div>
-    
+        
+        <div class="success" *ngIf="alert">
+            {{alert}}
+        </div>
       
         <!-- <div class="button" [routerLink]="['/home/create-order']" routerLinkActive="active">
             <button mat-raised-button class="btn-create">

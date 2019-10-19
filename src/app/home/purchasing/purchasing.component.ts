@@ -16,6 +16,7 @@ export interface template {
   styleUrls: ['./purchasing.component.scss']
 })
 export class PurchasingComponent implements OnInit {
+  alert: string;
   yags: Date;
   category: string;
   location: string;
@@ -65,6 +66,7 @@ export class PurchasingComponent implements OnInit {
     
     this.transactionServ.addTransaction(this.newTransaction);
 
+    this.alert = 'transaction added!';
     
   }   
 

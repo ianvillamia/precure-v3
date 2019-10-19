@@ -7,7 +7,7 @@
             ORDERS
  
     </mat-card>
-    <mat-accordion *ngIf="transactionServ.activeTransactions; else noTransactions">
+    <mat-accordion>
             <!-- item component -->
         <mat-expansion-panel *ngFor="let transaction of transactionServ.activeTransactions">
                 <mat-expansion-panel-header class="ripple" routerLinkActive="active">
@@ -27,7 +27,7 @@
                     <span>Budget</span>
                 </div>
                 <div class="row">
-                    <button mat-raised-button class="status" color="primary">Active</button>
+                <button mat-raised-button class="status" color="primary">{{transaction.status | uppercase}}</button>
                     <span>{{transaction.item_category}}</span>
                     <span>{{transaction.item_name}}</span>
                     <span>{{transaction.location}}</span>
@@ -45,9 +45,9 @@
                 <!-- item component -->
     </mat-accordion>
 
-    <ng-template #noTransactions>
+    <div *ngIf="loading">
         <app-loading-spinner></app-loading-spinner>
-    </ng-template>
+    </div>
     
     
       

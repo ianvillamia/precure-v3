@@ -2,4 +2,53 @@
     <div class="top-title">
         <span>Reports</span>
     </div>
+    <mat-card class="header">
+
+            ORDERS
+ 
+    </mat-card>
+    <mat-accordion>
+            <!-- item component -->
+        <mat-expansion-panel *ngFor="let transaction of transactionServ.receivedTransactions">
+                <mat-expansion-panel-header class="ripple" routerLinkActive="active">
+                    <mat-panel-title>Order ID: {{transaction.id}}</mat-panel-title>
+                        <div class="desc">
+                            <mat-panel-description>
+                                {{transaction.delivery_date.seconds * 1000 | date:'MMM dd, yyyy'}}
+                            </mat-panel-description>
+                        </div>
+                </mat-expansion-panel-header>
+             <div class="inside">
+                <div class="row-title">
+                    <span>Status</span>
+                    <span>Item category:</span> 
+                    <span>Item name </span> 
+                    <span>Location</span>
+                    <span>Budget</span>
+                </div>
+                <div class="row">
+                    <button mat-raised-button class="status" color="warn">{{transaction.status | uppercase}}</button>
+                    <span>{{transaction.item_category}}</span>
+                    <span>{{transaction.item_name}}</span>
+                    <span>{{transaction.location}}</span>
+                    <span>{{transaction.budget}}</span>
+                </div>
+             </div>
+             <!--<div class="buttons">
+                <button mat-raised-button class="cancel">Cancel Order</button>
+                <button mat-raised-button color="primary" [routerLink]="[ '/home/dashboard', transaction.id]">View Quotes</button>
+
+             </div>-->
+             
+        </mat-expansion-panel>
+
+                <!-- item component -->
+    </mat-accordion>
+
+    <div *ngIf="loading">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+    
+    
+      
 </div>
