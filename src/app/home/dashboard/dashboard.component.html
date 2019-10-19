@@ -35,7 +35,11 @@
                 </div>
              </div>
              <div class="buttons">
-                <button mat-raised-button class="cancel">Cancel Order</button>
+                <button mat-raised-button class="cancel">
+                    <i class="material-icons cancel">
+                    cancel
+                    </i>
+                    Cancel Order</button>
                 <button mat-raised-button color="primary" [routerLink]="[ '/home/dashboard', transaction.id]">View Quotes</button>
 
              </div>
