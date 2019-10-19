@@ -24,6 +24,7 @@ import { environment } from '../environments/environment.prod';
 import { TransactionService } from './home/shared/transaction.service';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 import { QuotesComponent } from './home/dashboard/quotes/quotes.component';
+import { AddQuoteComponent } from './add-quote/add-quote.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { QuotesComponent } from './home/dashboard/quotes/quotes.component';
     CreateOrderComponent,
     LoadingSpinnerComponent,
     QuotesComponent,
+    AddQuoteComponent,
   ],
   imports: [
     BrowserModule,
