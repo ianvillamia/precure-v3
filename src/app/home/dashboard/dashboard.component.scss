@@ -16,7 +16,7 @@
 
 .mat-card {
     margin-bottom:10px;
-    background-color: #ffa366
+    background-color: #ffd1b3
 }
 
 mat-expansion-panel-header {
@@ -31,6 +31,7 @@ mat-expansion-panel-header {
 }
 
 .status {
+    cursor:context-menu;
     font-size: 0.7em;
     background-color: #2eb66e;
     border-radius: 5em;
@@ -59,6 +60,7 @@ mat-expansion-panel-header {
     justify-content: space-between;
 
     span {
+        margin-top: 0.5em;
         margin-right: 1em;
     }
     
