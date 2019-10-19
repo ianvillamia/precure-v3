@@ -3,14 +3,14 @@
         <span>Dashboard</span>
     </div>
     <mat-card class="header">
-    <mat-card-header >
-        ORDERS
-    </mat-card-header>
+
+            ORDERS
+ 
     </mat-card>
     <mat-accordion *ngIf="transactionServ.activeTransactions; else noTransactions">
             <!-- item component -->
         <mat-expansion-panel *ngFor="let transaction of transactionServ.activeTransactions">
-                <mat-expansion-panel-header>
+                <mat-expansion-panel-header class="ripple" routerLinkActive="active">
                     <mat-panel-title>Order ID: {{transaction.id}}</mat-panel-title>
                         <div class="desc">
                             <mat-panel-description>
@@ -19,11 +19,20 @@
                         </div>
                 </mat-expansion-panel-header>
              <div class="inside">
-                <div class="row"><p>Status</p> <button mat-mini-fab color="primary">Active</button></div> 
-                <p> item category:</p> {{transaction.item_category}}
-                <p>item name </p> {{transaction.item_name}}
-                <p>location</p>{{transaction.location}}
-                 <p>budget</p>{{transaction.budget}}
+                <div class="row-title">
+                    <span>Status</span>
+                    <span>Item category:</span> 
+                    <span>Item name </span> 
+                    <span>Location</span>
+                    <span>Budget</span>
+                </div>
+                <div class="row">
+                    <button mat-raised-button class="status" color="primary">Active</button>
+                    <span>{{transaction.item_category}}</span>
+                    <span>{{transaction.item_name}}</span>
+                    <span>{{transaction.location}}</span>
+                    <span>{{transaction.budget}}</span>
+                </div>
              </div>
              <div class="buttons">
                 <button mat-raised-button class="cancel">Cancel Order</button>
