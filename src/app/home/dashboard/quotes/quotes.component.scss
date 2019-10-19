@@ -17,16 +17,19 @@
 .card-container{
     position: absolute;
     height: 80vh;
-    width: 90vw;
-    
+    width: 80vw;
     top: 5vh;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
 }
 .card{
     height: 40vh;
     width: 15vw;
     background-color: cornsilk;
     margin-top: 5%;
-    margin-right: 2em;
     border-radius: 5%;
 }
 
