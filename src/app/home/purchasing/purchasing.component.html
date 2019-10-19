@@ -15,7 +15,7 @@
                     <mat-form-field class="width" required>
                             <mat-label>Item Category</mat-label>
                             <mat-select required>
-                                <mat-option *ngFor="let category of city" [value]="category.value">
+                                <mat-option *ngFor="let category of categories" [(value)]="category">
                                 {{category.viewValue}}
                                 </mat-option>
                             </mat-select>
@@ -29,21 +29,23 @@
                     <mat-form-field class="width" required>
                         <mat-label>Location</mat-label>
                         <mat-select required>
-                            <mat-option *ngFor="let cities of city" [value]="cities.value">
-                            {{cities.viewValue}}
+                            <mat-option *ngFor="let city of cities" [(value)]="location">
+                            {{city.viewValue}}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
 
-                    <mat-form-field class="width" required>
+                    <mat-form-field class="width" required *ngIf="transactionServ.activeTransactions; else noTransactions">
                         <mat-label>Budget</mat-label>
                         <mat-select required>
-                            <mat-option *ngFor="let budgets of budget" [value]="budgets.value">
-                            {{budgets.viewValue}}
+                            <mat-option *ngFor="let budget of transactionServ.budgets" [(value)]="budget">
+                            {{budget.name}} - {{budget.available}}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
-                                     
+                    <ng-template #noTransactions>
+                            <app-loading-spinner></app-loading-spinner>
+                    </ng-template>           
         </div>
     
       
