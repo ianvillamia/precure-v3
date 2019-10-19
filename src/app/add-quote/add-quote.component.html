@@ -1,1 +1,36 @@
-<p>add-quote works!</p>
+<div class="body">
+    <div class="form">
+            <mat-form-field class="width" required>
+                    <mat-label>Supplier Name:</mat-label>
+                    <input  matInput required >
+            </mat-form-field>
+            <mat-form-field class="width" required>
+                    <mat-label>Item :</mat-label>
+                    <input  matInput required >
+            </mat-form-field>
+            <mat-form-field class="width" required>
+                    <mat-label>Description:</mat-label>
+                    <input  matInput required >
+            </mat-form-field>
+            <mat-form-field class="width" required>
+                    <mat-label>Supplier Name:</mat-label>
+                    <input  matInput required >
+            </mat-form-field>
+            <mat-form-field class="width" color="primary">
+                    <input [(ngModel)]="yags" matInput [matDatepicker]="picker" placeholder="Delivery Date" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            <mat-form-field class="width" required>
+                        <mat-label>Price:</mat-label>
+                        <input type="number"  matInput required >
+            </mat-form-field>
+            <mat-form-field class="width" required>
+                    <mat-label>Manufacturer:</mat-label>
+                    <input   matInput required >
+        </mat-form-field>
+         
+
+
+    </div>
+</div>
