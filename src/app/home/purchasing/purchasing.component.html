@@ -7,7 +7,7 @@
         <div class="create-order">
                 <mat-label class="title">Create Purchase Order</mat-label>
                     <mat-form-field class="width" color="primary">
-                        <input matInput [matDatepicker]="picker" placeholder="Delivery Date" required>
+                        <input [(ngModel)]="yags" matInput [matDatepicker]="picker" placeholder="Delivery Date" required>
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
