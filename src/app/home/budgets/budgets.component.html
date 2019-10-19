@@ -15,7 +15,6 @@
                 <!-- item component -->
                 <mat-expansion-panel *ngFor="let budget of transactionServ.budgets">
                         <mat-expansion-panel-header>
-
                                 <mat-panel-description>{{budget.name | uppercase}}</mat-panel-description>
                                 <mat-panel-description>{{budget.budget_holder}}</mat-panel-description>      
                                 <mat-panel-description>{{budget.total}}</mat-panel-description>
@@ -23,8 +22,23 @@
                         </mat-expansion-panel-header>
                         
                         <div class="right">
+<<<<<<< HEAD
                                 <button mat-raised-button color="primary">Edit</button>
                                 <button mat-raised-button>Delete</button>
+=======
+                            <button mat-raised-button>
+                                <i class="material-icons edit">
+                                        edit
+                                </i>
+                                Edit
+                            </button>
+                            <button mat-raised-button>
+                                <i class="material-icons delete">
+                                        delete
+                                </i>
+                                Delete
+                            </button>
+>>>>>>> 4fda1cf5fd3e150dc65b15bcea0fc1a5cb272a88
                         </div>
                        
                 </mat-expansion-panel>
@@ -57,6 +71,7 @@
 
                 <!-- item component --> 
         </mat-accordion>
+        <button mat-raised-button color="primary">Create Budget</button>
 
         <ng-template #noTransactions>
                 <app-loading-spinner></app-loading-spinner>

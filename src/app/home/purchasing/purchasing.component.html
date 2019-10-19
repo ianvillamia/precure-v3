@@ -60,7 +60,6 @@
         
     </div>
     
-   
         <button mat-raised-button class="add button" color="primary" disableRipple  [routerLink]="['/home/create-order']" routerLinkActive="active">
                 <i class="material-icons">
                         add_circle_outline
@@ -69,13 +68,18 @@
         </button>
     
         <button mat-raised-button class="red button"  disableRipple  [routerLink]="['/home/create-order']" routerLinkActive="active">
-            <i class="material-icons">
+            <i class="material-icons cancel">
                     cancel
             </i>
             <span class="x">Cancel</span>
         </button>
+<<<<<<< HEAD
         <button mat-raised-button class="green button" disableRipple (click)="saveTransaction()">
             <i class="material-icons">
+=======
+        <button mat-raised-button class="green button" disableRipple  [routerLink]="['/home/create-order']" routerLinkActive="active">
+            <i class="material-icons confirm">
+>>>>>>> 4fda1cf5fd3e150dc65b15bcea0fc1a5cb272a88
                     check
             </i>
             <span class="x">Confirm</span>
