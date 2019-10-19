@@ -15,8 +15,11 @@ export class TransactionService {
   locations: Location[];
   budgetsO: Observable<Budget[]>;
   budgetCol: AngularFirestoreCollection<Budget>;
+  transactionCol: AngularFirestoreCollection<Transaction>;
 
   constructor(private afs: AngularFirestore) { 
+    this.transactionCol = this.afs.collection('users/gIHQ7ONtv9uw4fsJzRni/transactions');
+
     this.budgetCol = this.afs.collection('users/gIHQ7ONtv9uw4fsJzRni/budgets', ref => ref.orderBy('name', 'desc'));
     this.budgetsO = this.budgetCol.snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -31,5 +34,8 @@ export class TransactionService {
     });
   }
 
+  addTransaction(transaction: Transaction){
+    this.transactionCol.add(transaction);
+  }
 
 }

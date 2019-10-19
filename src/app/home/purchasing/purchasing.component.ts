@@ -16,11 +16,19 @@ export interface template {
   styleUrls: ['./purchasing.component.scss']
 })
 export class PurchasingComponent implements OnInit {
-
-  newTransaction: Transaction;
+  yags: Date;
   category: string;
   location: string;
-  budget: string;
+  budget: number;
+  newTransaction: Transaction = {
+    delivery_date: new Date,
+    budget: 0,
+    item_category: '',
+    location: '',
+    item_name: '',
+    status: 'active'
+  };
+  itemName: string;
 
   cities: template[] = [
     {value: 'Makati-0', viewValue: 'Makati'},
@@ -29,12 +37,6 @@ export class PurchasingComponent implements OnInit {
     {value: 'Pasig-3', viewValue: 'Pasig'}
   ];
 
-  budgets: template[] = [
-    {value: 'Amazon-0', viewValue: 'Makati-Office'},
-    {value: 'Lazada-1', viewValue: 'Pateros-Office'},
-    {value: 'Shopee-2', viewValue: 'Quezon-Office'},
-    {value: 'Pasig-Office-3', viewValue: 'Pasig-Office'}
-  ];
   categories: template[] = [
     {value: 'Electronics', viewValue: 'Electronics'},
     {value: 'Hardware', viewValue: 'Hardware'},
@@ -49,5 +51,21 @@ export class PurchasingComponent implements OnInit {
   ngOnInit() {
 
   }
+  
+  saveTransaction(){
+    //console.log(this.yags);
+    
+    this.newTransaction.delivery_date = this.yags;
+    this.newTransaction.budget = this.budget;
+    this.newTransaction.item_category = this.category;
+    this.newTransaction.location = this.location;
+    this.newTransaction.item_name = this.itemName;
+
+    
+    
+    this.transactionServ.addTransaction(this.newTransaction);
+
+    
+  }   
 
 }
