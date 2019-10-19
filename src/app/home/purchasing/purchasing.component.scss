@@ -27,7 +27,7 @@
     }
     
     .darken{
-        background-color: #8AFF9D;
+        background-color: #2eb66e
     }
     
     .create-order{
@@ -48,14 +48,16 @@
     width: 10vw;
 }
 .green{
-    background-color: #4ebd17;
-    color: white;
     height: 6vh;
     font-size: 15px;
     position: absolute;
     top: 85vh;
     width: 10vw;
     right: 7vw;
+
+    i.confirm {
+        color: #2eb66e
+    }
 
 }
 .red{
@@ -67,6 +69,10 @@
     width: 10vw;
     right: 17vw;
     margin-right:5px;
+
+    i.cancel {
+        color: #ff2806;
+    }
 }
 
 .add
@@ -75,4 +81,6 @@
     top: 75vh;
     width: 15vw;
     right: 7vw;
+
+    
 }

@@ -31,3 +31,16 @@
     float: right;
     margin: 2%;
 }
+
+button {
+    margin-top: 1em;
+    margin-right: 1em;
+
+    i.edit {
+        color: #2eb66e;
+    }
+
+    i.delete {
+        color: #ff2806
+    }
+}
