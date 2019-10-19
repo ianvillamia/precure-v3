@@ -5,9 +5,8 @@ import { PurchasingComponent } from './home/purchasing/purchasing.component'
 import { BudgetsComponent } from './home/budgets/budgets.component'
 import { ReportsComponent } from './home/reports/reports.component'
 import { HomeComponent } from './home/home.component';
-import { CreateOrderComponent } from './home/purchasing/create-order/create-order.component';
 import { QuotesComponent } from './home/dashboard/quotes/quotes.component';
-
+import {AddQuoteComponent} from './add-quote/add-quote.component';
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent, children:[
@@ -20,7 +19,9 @@ const routes: Routes = [
     {path:'budget', component: BudgetsComponent},
     {path:'report', component: ReportsComponent},
     {path: 'dashboard/:id', component: QuotesComponent}
-  ]}
+  ]},
+  {path:'add-quote',component:AddQuoteComponent}
+  
   
   
   
