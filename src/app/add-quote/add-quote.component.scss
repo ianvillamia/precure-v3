@@ -1,16 +1,32 @@
 .body{
-    width: 100vw;
-    height: 100vh;
-}
-.form{
     position: absolute;
+    top:0;
+    left: 15vw;
+    padding: 2em;
+}
+
+.top-title{
+    width: 80vw;
+    border-bottom: 1px solid black;
+    span{
+        font-size: 5vh;
+    }
+    margin-bottom: 2vh;
+}
+
+.form{
     display: flex;
     flex-direction: column;
-    top: 10vh;
-    right: 25%;
-    height: 80vh;
-    width: 50vw;
+    position: absolute;
+    top: 10vh;  
+    margin-top: 1em;
+    width: 75vw;
+    height: 73vh;
     background-color:white;
-    padding: 5%;
-    border-radius: 5%;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--primary)
 }
